@@ -1,6 +1,6 @@
 {
   "name": "ya-zip",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Yet another zip utility for packaging and compressing a file or a directory",
   "main": "lib/index.js",
   "files": [
