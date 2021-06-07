@@ -62,12 +62,26 @@ Synchronous `zip`.
 
 MIT
 
+## Why not `cross-zip`?
+
+[cross-zip-cli](https://github.com/jprichardson/cross-zip-cli) (based on [cross-zip](https://github.com/feross/cross-zip)) has inconsistent behaviors on different platforms.
+
+```sh
+$ cross-zip ./src src.zip
+```
+
+This will create a zip file contains a `src` folder on macOS/Linux (which based on Info-ZIP's `zip` utility).
+
+```bat
+> cross-zip .\src src.zip
+```
+
+But this command will create a zip file without a `src` folder on Windows (which based on .Net API).
+
+**Note**: `ya-zip` will not create the redundant folder.
+
 ## See also
 
 - [zip(1) - Linux man page](https://linux.die.net/man/1/zip)
 - [unzip(1) - Linux man page](https://linux.die.net/man/1/unzip)
 - [node-archiver](https://github.com/archiverjs/node-archiver)
-
-## References
-
-- [cross-zip](https://github.com/feross/cross-zip)
